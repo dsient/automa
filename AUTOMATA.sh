@@ -13,3 +13,4 @@ sudo ufw --force enable;
 sudo apt update && sudo apt full-upgrade -y;
 echo "[ o7 ]: SUCCESS!"
 clear && cowsay "ALL DONE! =D"
+sudo reboot
