@@ -5,14 +5,13 @@ pip3 install --break-system-packages esptool platformio nrfutil mvt tailscale pa
 git clone https://github.com/justcallmekoko/ESP32Marauder.git /opt/esp32marauder;
 curl -fsSL https://tailscale.com/install.sh | sh && sudo tailscale up;
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 sudo ufw --force reset;
 sudo ufw default deny incoming;
 sudo ufw default allow outgoing;
 sudo ufw allow ssh;
 sudo ufw --force enable;
 sudo apt update && sudo apt full-upgrade -y;
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 echo "[ o7 ]: SUCCESS!"
 clear && cowsay "ALL DONE! =D"
 sudo reboot
